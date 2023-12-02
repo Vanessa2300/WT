@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geometric Shape Area Calculator</title>
+</head>
+<body>
+    <h1>Geometric Shape Area Calculator</h1>
+    
+    <label for="shape">Select a shape:</label>
+    <select id="shape">
+        <option value="rectangle">Rectangle</option>
+        <option value="triangle">Triangle</option>
+        <option value="circle">Circle</option>
+    </select>
+    
+    
+    <div id="inputFields">
+        <!-- Rectangle Input Fields -->
+        <div id="rectangleInputs">
+            <br>
+            <label for="rectLength">Length:</label>
+            <input type="number" id="rectLength"><br><br>
+            <label for="rectWidth">Width:</label>
+            <input type="number" id="rectWidth"><br><br>
+        </div>
+        
+        <!-- Triangle Input Fields -->
+        <div id="triangleInputs">
+            <br>
+            <label for="triBase">Base:</label>
+            <input type="number" id="triBase"><br><br>
+            <label for="triHeight">Height:</label>
+            <input type="number" id="triHeight"><br><br>
+        </div>
+        
+        <!-- Circle Input Fields -->
+        <div id="circleInputs">
+            <br>
+            <label for="circleRadius">Radius:</label>
+            <input type="number" id="circleRadius"><br><br>
+        </div>
+    </div>
+    
+    <button onclick="calculateArea()">Calculate Area</button>
+    
+    <p id="result"></p>
+    
+    <script>
+        function calculateArea() {
+            var shapeSelect = document.getElementById("shape");
+            var selectedShape = shapeSelect.value;
+            
+            var resultElement = document.getElementById("result");
+            
+            if (selectedShape === "rectangle") {
+                var length = parseFloat(document.getElementById("rectLength").value);
+                var width = parseFloat(document.getElementById("rectWidth").value);
+                
+                var area = length * width;
+                resultElement.textContent = "Area of Rectangle: " + area;
+            } else if (selectedShape === "triangle") {
+                var base = parseFloat(document.getElementById("triBase").value);
+                var height = parseFloat(document.getElementById("triHeight").value);
+                
+                var area = 0.5 * base * height;
+                resultElement.textContent = "Area of Triangle: " + area;
+            } else if (selectedShape === "circle") {
+                var radius = parseFloat(document.getElementById("circleRadius").value);
+                
+                var area = Math.PI * Math.pow(radius, 2);
+                resultElement.textContent = "Area of Circle: " + area.toFixed(2);
+            } else {
+                resultElement.textContent = "Please select a valid shape.";
+            }
+        }
+        
+        // Displaying input feeds upon selection
+        var shapeSelect = document.getElementById("shape");
+        shapeSelect.addEventListener("change", function() {
+            var selectedShape = shapeSelect.value;
+            var inputFields = document.getElementById("inputFields");
+            
+            var rectangleInputs = document.getElementById("rectangleInputs");
+            var triangleInputs = document.getElementById("triangleInputs");
+            var circleInputs = document.getElementById("circleInputs");
+            
+            rectangleInputs.style.display = "none";
+            triangleInputs.style.display = "none";
+            circleInputs.style.display = "none";
+            
+            if (selectedShape === "rectangle") {
+                rectangleInputs.style.display = "block";
+            } else if (selectedShape === "triangle") {
+                triangleInputs.style.display = "block";
+            } else if (selectedShape === "circle") {
+                circleInputs.style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>

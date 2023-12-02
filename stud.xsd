@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="students">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="student" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name" type="xs:string"/>
+              <xs:element name="course" type="xs:string"/>
+              <xs:element name="rollno" type="xs:integer"/>
+              <xs:element name="address" type="xs:string"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
+<!--<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:template match="/">
+<html>
+    <body>
+        <h2>Student List</h2>
+    </body>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Roll No</th>
+            <th>Address</th>
+        </tr>
+
+    <xsl:for-each select="students/student">
+        <tr>
+            <td><xsl:value-of select="name"/></td>
+            <td><xsl:value-of select="course"/></td>
+            <td><xsl:value-of select="rollno"/></td>
+            <td><xsl:value-of select="address"/></td>
+        </tr>
+    </xsl:for-each>
+    </table>
+</html>
+
+</xsl:template>
+    
+</xsl:stylesheet>-->

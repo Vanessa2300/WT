@@ -1,0 +1,10 @@
+<!ELEMENT restaurants (restaurant+)>
+<!ELEMENT restaurant (name, cuisine, location, rating)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT cuisine (#PCDATA)>
+<!ELEMENT location (address, city, state, zipcode)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT state (#PCDATA)>
+<!ELEMENT zipcode (#PCDATA)>
+<!ELEMENT rating (#PCDATA)>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE restaurants SYSTEM "restaurant.dtd">
+<restaurants>    <!--remove this tag to create well formedness error-->
+
+    <restaurant>
+        <name>La Trattoria</name>
+        <cuisine>Italian</cuisine>
+        <location>
+            <address>123 Main Street</address>
+            <city>New York</city>
+            <state>NY</state>
+            <zipcode>10001</zipcode>
+        </location>
+        <rating>4.5</rating>
+    </restaurant>
+    <restaurant>
+        <name>Sushi Haven</name>
+        <cuisine>Japanese</cuisine>
+        <location>
+            <address>456 Oak Avenue</address>
+            <city>Los Angeles</city>
+            <state>CA</state>
+            <zipcode>90002</zipcode>
+        </location>
+        <rating>4.0</rating>
+    </restaurant>
+  
+</restaurants>

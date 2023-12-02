@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+  <product>
+    <type>book</type>
+    <name>The Great Gatsby</name>
+    <author>F. Scott Fitzgerald</author>
+    <price>15.99</price>
+    <description>A classic novel about the American Dream.</description>
+  </product>
+  <product>
+    <type>book</type>
+    <name>To Kill a Mockingbird</name>
+    <author>Harper Lee</author>
+    <price>12.50</price>
+    <description>An iconic novel addressing racial injustice.</description>
+  </product>
+  <product>
+    <type>software</type>
+    <name>Microsoft Office 365</name>
+    <version>2022</version>
+    <price>149.99</price>
+    <description>Office suite for productivity and collaboration.</description>
+  </product>
+  <product>
+    <type>software</type>
+    <name>Adobe Photoshop</name>
+    <version>CC 2023</version>
+    <price>199.99</price>
+    <description>Professional image editing software.</description>
+  </product>
+</products>

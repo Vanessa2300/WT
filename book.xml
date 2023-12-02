@@ -1,0 +1,25 @@
+<!DOCTYPE library_info [
+  <!ELEMENT library_info (book_name, author_name, publication, year_of_publication)>
+  <!ELEMENT book_name (#PCDATA)>
+  <!ELEMENT author_name (#PCDATA)>
+  <!ELEMENT publication (#PCDATA)>
+  <!ELEMENT year_of_publication (#PCDATA)>
+]>
+<library_info>
+  <book_name>Sample Book</book_name>
+  <author_name>John Doe</author_name>
+  <publication>ABC Publications</publication>
+  <year_of_publication>2022</year_of_publication>
+</library_info>
+
+<!--
+
+<library_info>
+  <book_name>Sample Book</book_name>
+  <author_name>John Doe</author_name>
+  <publication>ABC Publications</publication>
+  <year_of_publication>2022</year_of_publication>
+  <!-- Invalid element -->
+  <invalid_element>Invalid Data</invalid_element>
+</library_info>
+-->

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Capitalization</title>
+</head>
+<body>
+    <h1>String Capitalization</h1>
+    
+    <label for="inputString">Enter a string:</label>
+    <input type="text" id="inputString">
+    <button onclick="capitalizeString()">Capitalize</button>
+    
+    <p>Capitalized String: <span id="capitalizedResult"></span></p>
+    
+    <script>
+        function capitalizeString() {
+            var inputElement = document.getElementById("inputString");
+            var resultElement = document.getElementById("capitalizedResult");
+            
+            var inputString = inputElement.value;
+            
+            var words = inputString.split(' ');
+            var capitalizedWords = [];
+            
+            for (var i = 0; i < words.length; i++) {
+                var word = words[i];
+                var capitalizedWord = word.charAt(0).toUpperCase() + word.slice(1);
+                capitalizedWords.push(capitalizedWord);
+            }
+            
+            var resultString = capitalizedWords.join(' ');
+            resultElement.textContent = resultString;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!ELEMENT real-estate (agencies, owners, properties, flats)>
+<!ELEMENT agencies EMPTY>
+<!ELEMENT properties EMPTY>
+<!ELEMENT flats EMPTY>
+
+<!ENTITY % ownerContent "name | address | contact">
+<!ELEMENT owners (%ownerContent;)>
+
+<!ENTITY % mode "Standard">
+<![%mode;[
+  <!ENTITY % ownerContent "name | address | contact">
+]]>

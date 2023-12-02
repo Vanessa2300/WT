@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant Database Validation</title>
+</head>
+<body>
+    <h1>Restaurant Database Validation</h1>
+    <div id="validationResult"></div>
+
+    <script>
+        // Function to validate the XML document against the DTD
+        function validateXML() {
+            const xmlDoc = new DOMParser().parseFromString(document.documentElement.outerHTML, 'text/xml');
+            const dtd = new DOMParser().parseFromString(`<!DOCTYPE restaurants SYSTEM "restaurant.dtd">`, 'text/xml');
+            const validator = new DOMParser().parseFromString('<validator></validator>', 'text/xml');
+            validator.documentElement.appendChild(validator.importNode(dtd.documentElement, true));
+            validator.documentElement.appendChild(validator.importNode(xmlDoc.documentElement, true));
+
+            const parser = new DOMParser();
+            const resultDoc = parser.parseFromString(new XMLSerializer().serializeToString(validator), 'text/xml');
+
+            const validationResultDiv = document.getElementById('validationResult');
+            
+            if (resultDoc.getElementsByTagName('parsererror').length > 0) {
+                // XML is not valid
+                const errors = resultDoc.getElementsByTagName('parsererror')[0];
+                validationResultDiv.innerHTML = '<p style="color: red;">Validation Error: ' + errors.textContent + '</p>';
+            } else {
+                // XML is valid
+                validationResultDiv.innerHTML = '<p style="color: green;">XML is valid.</p>';
+            }
+        }
+
+        // Call the validation function when the page loads
+        window.onload = validateXML;
+    </script>
+</body>
+</html>

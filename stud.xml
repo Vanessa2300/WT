@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="stud.xsd" type="text/xsd"?>
+<students>
+    <student>
+        <name>Kiran</name>
+        <course>MCA</course>
+        <rollno>424</rollno>
+        <address>Pune</address>
+    </student>
+    <student>
+        <name>Aditi</name>
+        <course>MBA</course>
+        <rollno>862</rollno>
+        <address>Mumbai</address>
+    </student>
+</students>

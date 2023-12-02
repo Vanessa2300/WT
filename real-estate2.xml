@@ -1,0 +1,12 @@
+<!DOCTYPE real-estate SYSTEM "real-estate2.dtd">
+<real-estate>
+  <agencies></agencies>
+  <owners>
+    <name>John Doe</name>
+    <address>123 Main St</address>
+    <contact>john@example.com</contact>
+    
+  </owners>
+  <properties></properties>
+  <flats></flats>
+</real-estate>

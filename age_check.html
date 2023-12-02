@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Age Verification</title>
+</head>
+<body>
+    <h1>Age Verification</h1>
+    
+    <label for="birthdate">Enter your birthdate:</label>
+    <input type="date" id="birthdate">
+    <button onclick="checkAge()">Check Age</button>
+    
+    <script>
+        function checkAge() {
+            var birthdateInput = document.getElementById("birthdate");
+            var birthdate = new Date(birthdateInput.value);
+            var currentDate = new Date();
+            
+            // Calculate the difference in years
+            var ageDifference = currentDate.getFullYear() - birthdate.getFullYear();
+            
+            // Check if the birthdate is less than 18 years ago
+            if (ageDifference < 18) {
+                alert("Invalid input. You must be at least 18 years old.");
+            } else {
+                alert("Valid input. You are eligible.");
+            }
+        }
+    </script>
+</body>
+</html>

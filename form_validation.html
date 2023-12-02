@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="validation.js"></script>    
+    
+</head>
+<body>
+   
+    
+    <form name="f1">
+        <table>
+            <tr>
+                <td colspan="2">
+                    <center>
+                        <h1>Order Information</h1>
+                    </center>
+                </td>
+            </tr>
+            <tr>
+                <td>Product ID: </td>
+                <td><input type="text" name="pid" id="pid"></td>
+            </tr>
+
+            <tr>
+                <td>Description: </td>
+                <td><input type="text" name="desc" id="desc"></td>
+            </tr>
+
+            <tr>
+                <td>Credit Card No: </td>
+                <td><input type="text" name="ccn" id="ccn"></td>
+            </tr>
+
+            <tr>
+                <td>Your Email ID: </td>
+                <td><input type="text" name="eid" id="eid"></td>
+            </tr>
+
+            <tr>
+                <td><center>
+                    <input type="button" name="submit" id="sub" value = "Submit" onclick="validate()"> 
+                </center>
+                </td>
+
+                <td>
+                    <center>
+                        <input type="button" name="clear" id="clr" value = "Clear" onclick="clearFields()">
+                    </center>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

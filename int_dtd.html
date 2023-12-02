@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Information</title>
+    <style>
+        h1 {
+            color: blue; 
+            text-align: center; 
+        }
+    </style>
+</head>
+<body>
+
+<h1>Library Information</h1>
+
+<!-- Internal DTD for Library Information -->
+<?xml version = "1.0"?>
+<!DOCTYPE note [
+    <!ELEMENT library_info (book_name, author_name, publication, year_of_publication)>
+    <!ELEMENT book_name (#PCDATA)>
+    <!ELEMENT author_name (#PCDATA)>
+    <!ELEMENT publication (#PCDATA)>
+    <!ELEMENT year_of_publication (#PCDATA)>
+   
+
+<library_info>
+    <book_name>The Great Gatsby</book_name> <br>
+    <author_name>F. Scott Fitzgerald</author_name><br>
+    <publication>Penguin Books</publication><br>
+    <year_of_publication>1925</year_of_publication>
+</library_info>
+
+</body>
+</html>

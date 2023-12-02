@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>FORM</title>
+<style>
+
+body{
+    background-image: url(book.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+   
+h2{
+ font-family: Sans-serif; 
+ font-size: 24px;     
+ font-style: normal; 
+ font-weight: bolder; 
+ color: rgb(0, 0, 0);
+ text-align: center; 
+ 
+ 
+}
+table{
+ font-family: verdana; 
+ color:white; 
+ font-size: 16px; 
+ font-style: normal;
+ font-weight: bold;
+ background: rgba(122, 66, 19, 0.486);  
+ border-collapse: collapse; 
+ border: 4px solid #000000; 
+ align-self: center;
+  
+}
+
+tr{
+ border-bottom: #0000003b solid;
+}
+
+table.inner{
+ border: 10px
+}
+input[type=text], input[type=email], input[type=number]{
+ width: 50%;
+ padding: 6px 12px;
+ margin: 5px 0;
+ box-sizing: border-box;
+}
+
+input[type=submit], input[type=reset]{
+ width: 15%;
+ font-size: 20px;
+ padding: 8px 12px;
+ margin: 5px 0;
+ box-sizing: border-box;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
+}
+</style>
+</head>
+<body>
+
+    
+<h2>Student Admission Form </h2>
+
+<form>
+<table class="center" cellpadding = "10">
+
+    
+<!--------------------- First Name ------------------------------------------>
+    <tr>
+    <td>First Name</td>
+    <td><input type="text" name="FirstName" maxlength="50" placeholder="Fisrt Name" required/>
+    (Max 50 Characters Allowed)
+    </td>
+    </tr>
+    
+<!------------------------ Last Name --------------------------------------->
+    <tr>
+    <td>Last Name</td>
+    <td><input type="text" name="LastName" maxlength="50" placeholder="Last Name" required />
+    (Max 50 Characters Allowed)
+    </td>
+    </tr>
+<!-------------------------- Email ID ------------------------------------->
+    <tr>
+    <td>Email ID</td>
+    <td><input type="email" name="EmailID" maxlength="100" placeholder="abc123@gmail.com" required/></td>
+    </tr>
+<!-------------------------- Mobile Number ------------------------------------->
+    <tr>
+    <td>Mobile Number</td>
+    <td>
+    <input type="text" name="MobileNumber" maxlength="10" placeholder="1234xxxxxx" required/>
+    (10 Digits Allowed)
+    </td>
+    </tr>
+<!---------------------- Gender ------------------------------------->
+    <tr>
+    <td>Gender</td>
+    <td>
+    <input type="radio" name="Gender" value="Male" required/>
+    Male
+    <input type="radio" name="Gender" value="Female" required/>
+    Female
+    </td>
+    </tr>
+<!--------------------------Date Of Birth----------------------------------->
+<tr>
+<td>Date of Birth(DOB)</td>
+<td><input type="date" id="birthday" name="birthday" required></td>
+</tr>
+<!------------------------- Address ---------------------------------->
+    <tr>
+    <td>Address<br /><br /><br /></td>
+    <td><textarea name="Address" rows="10" cols="50" required></textarea></td>
+    </tr>
+<!-------------------------- City ------------------------------------->
+    <tr>
+    <td>City</td>
+    <td><input type="text" name="City" maxlength="50" placeholder="Pune" required/>
+    (Max 50 Characters Allowed)
+    </td>
+    </tr>
+<!----- -------------------- Pin Code-------------------------------------->
+    <tr>
+    <td>Pin Code</td>
+    <td><input type="Number" name="PinCode" maxlength="6" placeholder="411037" required/>
+    (Max 6 Numbers Allowed)
+    </td>
+    </tr>
+<!---------------------------- State ----------------------------------->
+    <tr>
+    <td>State</td>
+    <td><input type="text" name="State" maxlength="50" placeholder="Maharashtra" required/>
+    (Max 50 Characters Allowed)
+    </td>
+    </tr>
+<!------------------------------ Country --------------------------------->
+    <tr>
+    <td>Country</td>
+    <td><input type="text" name="Country" placeholder="India" required /></td>
+    </tr>
+
+<!-----------------------Qualification---------------------------------------->
+    <tr>
+    <td>Qualification <br /><br /><br /></td>
+    <td>
+    <br/>
+    <input type="checkbox" name="HighSchool" value="High School" />
+    High School(10th)<br>
+    <input type="checkbox" name="HigherSchool" value="Higher School" />
+    Higher School(12th)<br/>
+    <input type="checkbox" name="Graduation" value="Graduation" />
+    Graduation(Bachelors)<br/>
+    <input type="checkbox" name="PostGraduation" value="Post Graduation" />
+    Post Graduation(Masters)<br/>
+    <input type="checkbox" name="Phd" value="Phd">
+    Phd
+    </td>
+    </tr>
+<!---------------------------- Courses ----------------------------------->
+    <tr>
+    <td>Course<br />Applied For</td>
+    <td>         
+    <input type="radio" name="Course" value="MCA" required>
+    MCA(Master of Computer Applications)<br>
+    <input type="radio" name="Course" value="MBA" required>
+    MBA(Master of Business Administraion)<br>
+    <input type="radio" name="Course" value="M.Tech" required>
+    M.Tech(Master of Technology)<br>
+    <input type="radio" name="Course" value="M.Com" required>
+    M.Com(Master of Commerce)<br>
+    <input type="radio" name="Course" value="M.Sc" required>
+    M.Sc(Master of Science)<br>
+    <input type="radio" name="Course" value="M.A" required>
+    MA(Master of Arts)<br>
+    </td>
+    </tr>
+<!----------------------- Submit and Reset ------------------------------->
+    <tr>
+    <td colspan="2" align="center">
+    <input type="submit" value="Submit">
+    <input type="reset" >
+    </td>
+    </tr>
+</table>
+</form>
+</body>
+</html>

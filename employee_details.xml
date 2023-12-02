@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE employees SYSTEM "employee_details.dtd">
+<employees>
+  <employee>
+    <employee_id>101</employee_id>
+    <first_name>Jane</first_name>
+    <last_name>Will</last_name>
+    <email>abcdef@email.com</email>
+    <department>Software Engineer</department>
+    <salary>55000</salary>
+  </employee>
+
+  <employee>
+    <employee_id>102</employee_id>
+    <first_name>Kiara</first_name>
+    <last_name>Smith</last_name>
+    <email>xyz@example.com</email>
+    <department>HR</department>
+    <salary>60000</salary>
+  </employee>
+</employees>
+
+

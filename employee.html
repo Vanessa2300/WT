@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Details</title>
+</head>
+<body>
+    <h1>Employee Details</h1>
+    <div id="employeeData"></div>
+
+    <script>
+        // Use JavaScript to load and display XML content
+        fetch('employee_details.xml')
+            .then(response => response.text())
+            .then(data => {
+                // Parse the XML data
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(data, 'text/xml');
+
+                // Extract and display employee details
+                const employees = xmlDoc.getElementsByTagName('employee');
+                const employeeDataDiv = document.getElementById('employeeData');
+
+                let employeeHTML = '<ul>';
+                for (let i = 0; i < employees.length; i++) {
+                    const employee = employees[i];
+                    const firstName = employee.getElementsByTagName('first_name')[0].textContent;
+                    const lastName = employee.getElementsByTagName('last_name')[0].textContent;
+                    const email = employee.getElementsByTagName('email')[0].textContent;
+                    const department = employee.getElementsByTagName('department')[0].textContent;
+                    const salary = employee.getElementsByTagName('salary')[0].textContent;
+
+                    employeeHTML += `
+                        <li>
+                            <strong>Name:</strong> ${firstName} ${lastName}<br>
+                            <strong>Email:</strong> ${email}<br>
+                            <strong>Department:</strong> ${department}<br>
+                            <strong>Salary:</strong> Rs ${salary}
+                        </li>
+                        <br>
+                    `;
+                }
+                employeeHTML += '</ul>';
+                employeeDataDiv.innerHTML = employeeHTML;
+            })
+            .catch(error => {
+                console.error('Error loading XML:', error);
+            });
+    </script>
+</body>
+</html>
