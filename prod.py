@@ -16,3 +16,5 @@ result_tree = transform(xml_tree)
 
 # Display the resulting HTML
 print(ET.tostring(result_tree, pretty_print=True, encoding="unicode"))
+
+#https://www.freeformatter.com/xsl-transformer.html#before-output
